@@ -1,0 +1,6 @@
+@CHARSET "ISO-8859-1";
+
+.form-item { margin: 20px 0; }
+.form-label { font-weight: bold; }
+.form-error-field { background-color: #FFC; }
+.form-error-message { font-weight: bold; color:red; }
