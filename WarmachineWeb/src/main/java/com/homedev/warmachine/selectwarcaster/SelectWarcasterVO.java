@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.homedev.warmachine.common.ViewObject;
-import com.homedev.warmachine.service.Warcaster;
+import com.homedev.warmachine.service.warcaster.Warcaster;
 import com.homedev.warmachine.util.KeyValueTO;
 
 public class SelectWarcasterVO implements ViewObject {

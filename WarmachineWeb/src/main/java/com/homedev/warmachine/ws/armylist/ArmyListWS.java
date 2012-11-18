@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.homedev.warmachine.service.Army;
+import com.homedev.warmachine.service.army.Army;
 
 /**
  * Web services dealing with army lists.

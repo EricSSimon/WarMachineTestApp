@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.homedev.warmachine.common.ArmySetupController;
 import com.homedev.warmachine.common.NavigationConstants;
 import com.homedev.warmachine.common.ViewObject;
-import com.homedev.warmachine.service.ArmyService;
-import com.homedev.warmachine.service.Warcaster;
+import com.homedev.warmachine.service.army.ArmyService;
+import com.homedev.warmachine.service.warcaster.Warcaster;
+import com.homedev.warmachine.service.warcaster.WarcasterService;
 
 /**
  * Select which warcasters will be used.
@@ -23,7 +24,7 @@ import com.homedev.warmachine.service.Warcaster;
 public class SelectWarcasterController extends ArmySetupController {
 	 
 	@Autowired
-	private ArmyService armyService;
+	private WarcasterService warcasterService;
 	
 	/**
 	 * Constructor.
@@ -57,14 +58,7 @@ public class SelectWarcasterController extends ArmySetupController {
 	 * Builds the dropdowns for the page.
 	 */
 	protected void buildDropdowns(ViewObject viewObject) {
-		List<Warcaster> warcasters = armyService.getWarcastersForFaction(army.getSelectedFaction());
+		List<Warcaster> warcasters = warcasterService.getWarcastersForFaction(army.getSelectedFaction());
 		((SelectWarcasterVO) viewObject).buildDropdowns(warcasters);
-	}
-
-	/**
-	 * @param pArmyService the armyService to set
-	 */
-	public void setArmyService(ArmyService pArmyService) {
-		armyService = pArmyService;
 	}
 }
