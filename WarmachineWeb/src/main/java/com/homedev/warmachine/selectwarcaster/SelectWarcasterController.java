@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.homedev.warmachine.common.ArmySetupController;
 import com.homedev.warmachine.common.NavigationConstants;
 import com.homedev.warmachine.common.ViewObject;
-import com.homedev.warmachine.service.army.ArmyService;
 import com.homedev.warmachine.service.warcaster.Warcaster;
 import com.homedev.warmachine.service.warcaster.WarcasterService;
 
